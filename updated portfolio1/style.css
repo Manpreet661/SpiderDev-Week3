@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ===== THEME VARIABLES ===== */
+:root {
+    --bg: #0b1220;
+    --text: #e5e7eb;
+    --card: rgba(255, 255, 255, 0.06);
+    --border: rgba(255, 255, 255, 0.12);
+    --primary: #38bdf8;
+    --glow: rgba(56, 189, 248, 0.4);
+}
+
+body.light {
+    --bg: #f6f7fb;
+    --text: #0f172a;
+    --card: rgba(255, 255, 255, 0.9);
+    --border: rgba(15, 23, 42, 0.1);
+    --primary: #2563eb;
+    --glow: rgba(37, 99, 235, 0.25);
+}
+
+/* ===== BODY ===== */
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: all 0.4s ease;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--card);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 18px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* ===== THEME BUTTON ===== */
+.theme-btn {
+    background: var(--primary);
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px var(--glow);
+}
+
+.theme-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 90px 0;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+}
+
+.hero-text span {
+    color: var(--primary);
+}
+
+.hero-description {
+    margin: 15px 0;
+}
+
+/* ===== BUTTONS ===== */
+.btn, .btn-outline {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.btn {
+    background: var(--primary);
+    color: white;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px var(--glow);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+/* ===== GLASS CARDS ===== */
+.skill-card,
+.project-card,
+.info-box,
+.achievement {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 14px;
+    backdrop-filter: blur(12px);
+}
+
+/* ===== GRIDS ===== */
+.skills-grid,
+.project-grid,
+.about-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.about-grid {
+    grid-template-columns: 2fr 1fr;
+}
+
+/* ===== HOVER EFFECT ===== */
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px var(--glow);
+    transition: 0.3s;
+}
+
+/* ===== CONTACT ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--card);
+    margin-top: 40px;
+}
